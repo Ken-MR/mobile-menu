@@ -1,0 +1,20 @@
+.screen {
+  height: 640px;
+  width: 360px;
+  display: grid !important;
+  grid-template-rows: 9fr 1fr;
+  border: 5px solid gray;
+  margin: 20px;
+}
+
+.page {
+  grid-row: 1;
+}
+
+.nav_menu {
+  border-top: 2px solid gray;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
