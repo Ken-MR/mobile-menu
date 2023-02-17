@@ -19,9 +19,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 
-.nav_bar {
+#nav_bar {
   display: table-cell;
   vertical-align: middle;
   height: 64px;
@@ -36,6 +37,14 @@
   font-size: 1.2em;
   width: 50px;
   margin: 0 auto;
+
+  position: absolute;
+
+}
+
+#open_close, .nav_button {
+  position: relative;
+  z-index: 10;
 }
 
 #open_close {
@@ -53,4 +62,17 @@
 .unclicked {
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
+}
+
+.expand {
+  animation: expansion 0.3s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes expansion {
+  from {
+    width: 50px;
+  }
+  to {
+    width: 340px;
+  }
 }

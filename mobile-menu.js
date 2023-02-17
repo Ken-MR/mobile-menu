@@ -1,20 +1,28 @@
 const mobile_menu = (() => {
-  const rotateNavigation = (item) => {
-    item.addEventListener('click', () => {
-      if (item.classList.contains('clicked')) {
-        item.classList.add('unclicked');
-        item.classList.remove('clicked');
+  const expandNavigation = (navButton, navBar) => {
+    navButton.addEventListener('click', () => {
+      if (navButton.classList.contains('clicked')) {
+        navButton.classList.add('unclicked');
+        navButton.classList.remove('clicked');
+
+        navBar.classList.add('retract');
+        navBar.classList.remove('expand');
       }
       else {
-        item.classList.add('clicked');
-        item.classList.remove('unclicked');
+        navButton.classList.add('clicked');
+        navButton.classList.remove('unclicked');
+        
+        navBar.classList.add('expand');
+        navBar.classList.remove('retract');
       }
     });
   }
-  return { rotateNavigation };
+  return { expandNavigation };
 })();
 
 const navButton = document.getElementById('open_close');
 
-mobile_menu.rotateNavigation(navButton);
+const navBar = document.getElementById('nav_bar');
+
+mobile_menu.expandNavigation(navButton, navBar);
 
