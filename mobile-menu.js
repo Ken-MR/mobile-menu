@@ -1,7 +1,14 @@
 const mobile_menu = (() => {
   const rotateNavigation = (item) => {
     item.addEventListener('click', () => {
-      item.classList.add('clicked');
+      if (item.classList.contains('clicked')) {
+        item.classList.add('unclicked');
+        item.classList.remove('clicked');
+      }
+      else {
+        item.classList.add('clicked');
+        item.classList.remove('unclicked');
+      }
     });
   }
   return { rotateNavigation };
