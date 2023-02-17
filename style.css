@@ -63,6 +63,55 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.icon_appear_slow {
+  animation: grow 1s ease-in-out 2s 1 normal forwards;
+}
+
+.icon_appear_fast {
+  animation: grow 2s ease-in-out 1s 1 normal forwards;
+}
+
+.icon_vanish_slow {
+  animation: shrink 1s ease-in-out 2s 1 normal forwards;
+}
+
+.icon_vanish_fast {
+  animation: shrink 2s ease-in-out 1s 1 normal forwards;
+}
+
+@keyframes grow {
+  0% {
+    transform: rotate(0deg) scale(0.1);
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);;
+    opacity: 1;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: rotate(0deg) scale(1);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  99% {
+    visibility: hidden;
+  }
+
+  100% {
+    transform: rotate(-360deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
 .expand {
   animation: expansion 0.3s ease-in-out 0s 1 normal forwards;
 }
