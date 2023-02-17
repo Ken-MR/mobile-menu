@@ -38,8 +38,14 @@
   margin: 0 auto;
 }
 
-.open_close {
+#open_close {
   position: relative;
   top: 25%;
   color: white;
+  cursor: pointer;
+}
+
+.clicked {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
 }
