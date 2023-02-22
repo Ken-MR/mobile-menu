@@ -10,7 +10,7 @@ const mobile_menu = (() => {
         navBar.classList.remove('expand');
 
         for (let i = 0; i < buttons.length; i++) {
-          showButton(buttons[i], buttonType, 'retract');
+          showButton(buttons[i], buttonType[i], 'retract');
         }
       }
       else {
@@ -21,7 +21,7 @@ const mobile_menu = (() => {
         navBar.classList.remove('retract');
 
         for (let i = 0; i < buttons.length; i++) {
-          showButton(buttons[i], buttonType, 'expand');
+          showButton(buttons[i], buttonType[i], 'expand');
         }
       }
     });
