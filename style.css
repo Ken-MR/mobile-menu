@@ -68,13 +68,13 @@
 }
 
 .icon_vanish_fast {
-  opacity: 0;
   animation: shrink .1s ease-in-out .2s 1 normal backwards;
+  opacity: 0;
 }
 
 .icon_vanish_slow {
-  opacity: 0;
   animation: shrink .2s ease-in-out .1s 1 normal backwards;
+  opacity: 0;
 }
 
 @keyframes grow {
